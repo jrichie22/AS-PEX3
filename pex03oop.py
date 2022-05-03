@@ -428,7 +428,8 @@ class DroneMission:
         drone_lib.log_activity("Time to return home.")
         self.mission_mode = MISSION_MODE_RTL
 
-        # TODO: return the drone home, your job is done... (done the line above this?)
+        # TODO: return the drone home, your job is done... (done)
+        drone_lib.return_to_launch(self.drone, log=log)
         cv2.putText(frame_write, "Returning home...", (10, 500), IMG_FONT, 1, (255, 0, 0), 2, cv2.LINE_AA)
 
     def determine_action(self, target_point, frame_write=None):
