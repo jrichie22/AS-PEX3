@@ -389,6 +389,7 @@ class DroneMission:
 
                 alt_thresh = 5  # TODO: YOU set here... when above a certain alt, what rate do you want to descend? (edited)
                 # TODO: figure out your speeds here
+                
                 self.log_info("Lowering package....")
                 while self.drone.location.global_relative_frame.alt > alt_thresh:
                     if self.drone.mode == "RTL" \
